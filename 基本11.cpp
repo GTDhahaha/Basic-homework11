@@ -1,0 +1,64 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main()
+{
+	int x,y,z;
+	printf("Please enter three algebras\n");
+	printf("x=");
+	scanf("%d",&x);
+	printf("y=");
+	scanf("%d",&y);
+	printf("z=");
+	scanf("%d",&z);
+		
+	if (x == y)
+	{
+		if (x>z)
+			printf("%d,%d,%d\n",z,x,y);
+		else if (x<z)
+			printf("%d,%d,%d\n",x,y,z);
+		else if (x == z)
+			printf("%d,%d,%d\n",x,y,z);
+	}
+		
+	else if (x == z)
+	{
+		if (x>y)
+			printf("%d,%d,%d\n",z,x,y);
+		else if (x<y)
+			printf("%d,%d,%d\n",y,x,z);
+	}
+	
+	else if (y == z)
+	{
+		if (y>x)
+			printf("%d,%d,%d\n",x,z,y);
+		else if (y<x)
+			printf("%d,%d,%d\n",y,z,x);
+	}
+	
+	else if (x>y)
+	{
+		if (z>x)
+			printf("%d,%d,%d\n",y,x,z);
+		else if (z>y)
+			printf("%d,%d,%d\n",y,z,x);
+		else if (z<y)
+			printf("%d,%d,%d\n",z,y,x);
+	}
+	
+	else if (x<y)
+	{
+		if (z>y)
+			printf("%d,%d,%d\n",x,y,z);
+		else if (z<x)
+			printf("%d,%d,%d\n",z,x,y);
+		else if (z>x)
+			printf("%d,%d,%d\n",x,z,y);
+	}
+	
+	system("pause");
+	return 0;
+	
+}
